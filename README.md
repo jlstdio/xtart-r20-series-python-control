@@ -1,17 +1,3 @@
-네, 사용자가 제공한 파일들과 제가 수정한 내용을 반영하여 `README.md` 파일을 최신화했습니다.
-
-주요 변경 사항은 다음과 같습니다.
-
-  - **`fwd_test.py` 추가**: 새로 생성한 FWD 모델 테스트 스크립트를 파일 구조와 빠른 시작 가이드에 추가했습니다.
-  - **키보드 제어 설명 수정**: 제어 방식을 더 직관적인 'Press-and-Hold' 방식으로 변경하고, 주요 키(`Space`, `ESC` 등)의 역할을 명확히 수정했습니다.
-  - **API 레퍼런스 업데이트**: `set_rgb_light` 함수에 `mode` 파라미터를 추가하고, 새로 추가된 `save_light_setting` 함수를 명시했습니다.
-  - **문제 해결(Troubleshooting) 항목 추가**: 실제 발생했던 macOS에서의 `keyboard` 라이브러리 권한 문제를 해결하는 방법을 추가하여 문서의 실용성을 높였습니다.
-
------
-
-### \#\# 수정된 README.md
-
-```markdown
 # Xtark R20 Python Controller
 
 ROS 없이 순수 Python으로 OpenCTR H60과 직접 통신하여 Xtark R20 로봇을 제어하는 프로그램입니다.
@@ -151,8 +137,3 @@ get_current_velocity() -> Velocity # 현재 설정된 속도 조회
   - **증상**: `sudo`로 실행해도 `OSError: Error 13` 또는 `Unrecognized character` 오류 발생
   - **원인**: macOS의 보안 정책으로 인해 `keyboard` 라이브러리가 키 입력을 감지하려면 별도의 권한이 필요합니다.
   - **해결책**: `시스템 설정 > 개인정보보호 및 보안 > 손쉬운 사용`에서 스크립트를 실행하는 **터미널 앱(Terminal, VS Code 등)을 목록에 추가하고 권한을 허용**해주세요. 권한 부여 후 반드시 터미널 앱을 재시작해야 합니다.
-
-<!-- end list -->
-
-```
-```
