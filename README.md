@@ -2,14 +2,6 @@
 
 ROS 없이 순수 Python으로 OpenCTR H60과 직접 통신하여 Xtark R20 로봇을 제어하는 프로그램입니다.
 
-## 📋 특징
-
-- [cite_start]**ROS 독립적**: ROS 설치 없이 순수 Python으로 구현 [cite: 1]
-- [cite_start]**다양한 로봇 타입 지원**: 메카넘 휠, 차동구동, 아커만 조향 등 [cite: 1]
-- [cite_start]**실시간 제어**: 키보드 및 자동 패턴 제어 [cite: 1]
-- [cite_start]**센서 데이터 수신**: 오도메트리, IMU, 배터리 정보 [cite: 1]
-- [cite_start]**크로스 플랫폼**: Windows, macOS, Linux 지원 [cite: 1]
-
 ## 📁 파일 구조
 
 ```
@@ -37,8 +29,7 @@ python\_controller/
 ```bash
 python setup.py
 ````
-
-[cite\_start]이 명령으로 필요한 라이브러리 설치, 설정 파일 생성, 연결 테스트를 한 번에 할 수 있습니다. [cite: 1]
+이 명령으로 필요한 라이브러리 설치, 설정 파일 생성, 연결 테스트를 한 번에 할 수 있습니다.
 
 ### 2\. 키보드 제어
 
@@ -67,7 +58,7 @@ python auto_control.py [시리얼_포트]
 
 **지원 패턴:**
 
-  - [cite\_start]사각형, 원형, 8자, 춤 패턴 등 다양한 자동 경로 주행을 지원합니다. [cite: 1]
+  - 사각형, 원형, 8자, 춤 패턴 등 다양한 자동 경로 주행을 지원합니다.
 
 ### 4\. FWD 모델 기본 동작 테스트
 
@@ -128,9 +119,9 @@ get_current_velocity() -> Velocity # 현재 설정된 속도 조회
 
 ### 연결 문제
 
-1.  [cite\_start]**시리얼 포트를 찾을 수 없음**: `lsusb`, `dmesg | tail` (Linux) 또는 장치 관리자(Windows)로 포트 이름을 확인하세요. [cite: 1]
-2.  [cite\_start]**권한 거부(Permission Denied) 오류 (Linux)**: `sudo usermod -a -G dialout $USER` 명령으로 사용자에게 시리얼 포트 접근 권한을 부여하고 재부팅하세요. [cite: 1]
-3.  [cite\_start]**포트가 사용 중(Port is already open)**: 다른 프로그램(예: ROS, 다른 터미널)이 포트를 사용하고 있는지 확인하고 종료하세요. [cite: 1]
+1.  **시리얼 포트를 찾을 수 없음**: `lsusb`, `dmesg | tail` (Linux) 또는 장치 관리자(Windows)로 포트 이름을 확인하세요.
+2.  **권한 거부(Permission Denied) 오류 (Linux)**: `sudo usermod -a -G dialout $USER` 명령으로 사용자에게 시리얼 포트 접근 권한을 부여하고 재부팅하세요.
+3.  **포트가 사용 중(Port is already open)**: 다른 프로그램(예: ROS, 다른 터미널)이 포트를 사용하고 있는지 확인하고 종료하세요.
 
 ### 키보드 제어 문제 (macOS)
 
